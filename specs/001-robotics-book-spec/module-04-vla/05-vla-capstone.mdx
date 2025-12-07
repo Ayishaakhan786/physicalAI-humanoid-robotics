@@ -1,0 +1,48 @@
+# Chapter Spec: VLA Capstone Project: Bringing It All Together
+
+**Module**: Vision-Language-Action (VLA)
+**Chapter Title**: VLA Capstone Project: Bringing It All Together
+**Filename**: 05-vla-capstone.mdx
+**Word Count Target**: 1800-2000 words
+
+## Learning Objectives (3-5)
+- Integrate all VLA components (speech recognition, NLU, action planning) into a cohesive robotic system.
+- Design an end-to-end VLA pipeline for a complex human-robot interaction scenario.
+- Implement robust error handling and feedback mechanisms for VLA systems.
+- Evaluate the overall performance and usability of a VLA-enabled robot.
+- Understand challenges and future directions in VLA research and application.
+
+## Required Pre-knowledge
+- Understanding of speech recognition, NLU, and action planning (from previous chapters).
+- Python programming skills.
+- Familiarity with ROS 2.
+- Experience with simulated robot environments (Gazebo, Isaac Sim).
+
+## High-level Lab Tasks
+- Define a complex multi-turn human-robot interaction scenario (e.g., "Robot, please clear the table. Start with the red cup.").
+- Integrate the Whisper ASR node, NLU parsing node, and task planning node into a single ROS 2 system.
+- Develop a control interface for a simulated mobile manipulator robot to execute the VLA commands.
+- Implement visual feedback (e.g., highlighting detected objects) and verbal feedback (e.g., "Okay, I will clear the table.") from the robot.
+- Test the end-to-end VLA pipeline with various commands, including edge cases and ambiguities.
+
+## Code Snippets to Include (list of files and short description)
+- `vla_system_launch.py`: ROS 2 launch file to bring up the entire VLA pipeline.
+- `vla_feedback_node.py`: ROS 2 node for verbal and visual feedback from the robot.
+- `complex_interaction_scenario.md`: Markdown document detailing the capstone scenario.
+
+## Diagrams to Create (text description + suggested filename)
+- Diagram: End-to-end VLA system architecture, showing all integrated components and data flow. Suggested filename: `vla_end_to_end_arch.png`.
+- Diagram: Human-robot interaction loop for a VLA system, including verbal commands, robot perception, decision, and action. Suggested filename: `hri_vla_loop.png`.
+
+## Tests/Validation Criteria
+- The VLA system correctly interprets complex multi-turn commands.
+- The simulated robot executes the intended sequence of actions based on VLA commands.
+- Robust error handling is demonstrated for ambiguous or unsupported commands.
+- Robot provides appropriate feedback during interaction.
+- Overall system demonstrates intelligent and intuitive human-robot interaction.
+
+## Sources (primary docs, links) in APA format
+- Research papers on Embodied AI and Human-Robot Interaction.
+- ROS 2 documentation for system integration.
+- NVIDIA Isaac Sim tutorials for advanced robot control and perception.
+- OpenAI/Whisper documentation for VLA components.

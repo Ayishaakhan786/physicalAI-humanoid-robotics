@@ -1,0 +1,46 @@
+# Chapter Spec: Working with Nodes and Topics
+
+**Module**: The Robotic Nervous System (ROS 2)
+**Chapter Title**: Working with Nodes and Topics
+**Filename**: 03-nodes-topics.mdx
+**Word Count Target**: 1500-1800 words
+
+## Learning Objectives (3-5)
+- Create and compile basic ROS 2 nodes using both Python (rclpy) and C++ (rclcpp).
+- Publish data to ROS 2 topics using different message types.
+- Subscribe to ROS 2 topics and process incoming messages.
+- Understand the concepts of QoS (Quality of Service) policies for topics.
+- Utilize ROS 2 command-line tools for topic introspection and debugging.
+
+## Required Pre-knowledge
+- Understanding of ROS 2 architecture and core concepts (from previous chapter).
+- Basic programming skills in Python and/or C++.
+- Familiarity with the Linux command line.
+
+## High-level Lab Tasks
+- Implement a Python publisher and subscriber for `std_msgs/String` messages.
+- Implement a C++ publisher and subscriber for `std_msgs/Int32` messages.
+- Experiment with different QoS settings (e.g., durability, reliability, history) for topics.
+- Use `ros2 topic list`, `ros2 topic info`, `ros2 topic echo`, `ros2 topic hz` to monitor topic communication.
+
+## Code Snippets to Include (list of files and short description)
+- `py_string_publisher.py`: Python node publishing `std_msgs/String`.
+- `py_string_subscriber.py`: Python node subscribing to `std_msgs/String`.
+- `cpp_int_publisher.cpp`: C++ node publishing `std_msgs/Int32`.
+- `cpp_int_subscriber.cpp`: C++ node subscribing to `std_msgs/Int32`.
+- `qos_publisher.py`: Python publisher demonstrating different QoS policies.
+
+## Diagrams to Create (text description + suggested filename)
+- Diagram: Flow of data from publisher node to subscriber node via a topic, highlighting QoS role. Suggested filename: `ros2_topic_flow_qos.png`.
+- Diagram: Node lifecycle states (unconfigured, inactive, active, finalized). Suggested filename: `ros2_node_lifecycle.png`.
+
+## Tests/Validation Criteria
+- Successful compilation of C++ nodes and execution of both Python and C++ nodes.
+- `ros2 topic echo` displays messages from all publishers.
+- Subscribers correctly receive and process messages.
+- Different QoS settings demonstrate expected behavior changes (e.g., late-joining subscribers receiving old messages with 'transient_local' durability).
+
+## Sources (primary docs, links) in APA format
+- ROS 2 Tutorials: Writing a simple publisher and subscriber (Python/C++) (docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/...).
+- ROS 2 Concepts: Quality of Service Policies (docs.ros.org/en/humble/Concepts/About-Quality-of-Service-Settings.html).
+- ROS 2 CLI Tools documentation (docs.ros.org/en/humble/Tutorials/Turtlesim/…).

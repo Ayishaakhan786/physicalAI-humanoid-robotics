@@ -1,0 +1,40 @@
+# Test Commands for Instructors: Physical AI & Humanoid Robotics Book
+
+**Feature Branch**: `001-robotics-book-spec` | **Date**: 2025-12-07 | **Plan**: specs/001-robotics-book-spec/plan.md
+**Spec**: specs/001-robotics-book-spec/spec.md
+**Tasks**: specs/001-robotics-book-spec/tasks.md
+
+This CSV file contains a list of key commands instructors can run locally to validate the reproducibility and correctness of the book's examples and overall system.
+
+## Format:
+`MODULE,CHAPTER,TEST_CATEGORY,DESCRIPTION,COMMAND_TO_RUN,EXPECTED_OUTPUT`
+
+## Commands:
+
+```csv
+MODULE,CHAPTER,TEST_CATEGORY,DESCRIPTION,COMMAND_TO_RUN,EXPECTED_OUTPUT
+ROS 2,Introduction to ROS 2,Installation Verification,"Verify ROS 2 Humble installation and basic talker/listener example.","ros2 run demo_nodes_cpp talker & ros2 run demo_nodes_py listener",Talker and Listener nodes communicating successfully.
+ROS 2,ROS 2 Architecture,Introspection,"Verify node connections using rqt_graph.","rqt_graph",Graphical representation of nodes and topics.
+ROS 2,Working with Nodes and Topics,QoS Test,"Verify late-joining subscriber receives messages with transient_local QoS.","ros2 run my_package qos_publisher.py (run first); sleep 5; ros2 run my_package qos_subscriber.py",Subscriber receives messages published before its launch.
+ROS 2,Implementing Services and Actions,Service Test,"Verify add_two_ints service.","ros2 run my_package add_two_ints_server & ros2 service call /add_two_ints std_srvs/srv/AddTwoInts '{a: 1, b: 2}'",Service returns sum: 3.
+ROS 2,Implementing Services and Actions,Action Test,"Verify fibonacci action server.","ros2 run my_package fibonacci_action_server & ros2 action send_goal /fibonacci example_interfaces/action/Fibonacci '{order: 5}'",Action client receives feedback and final result (sequence 0 1 1 2 3 5).
+ROS 2,Basic Robot Control,Teleoperation,"Verify simulated robot teleoperation with keyboard.","ros2 launch my_robot_launch spawn_robot.launch.py & ros2 run teleop_twist_keyboard teleop_twist_keyboard",Simulated robot moves according to keyboard input.
+Digital Twin,Gazebo Simulation Basics,World Load,"Verify custom Gazebo world loads correctly.","gazebo --verbose path/to/simple_world.world",Gazebo GUI shows defined objects.
+Digital Twin,URDF and Robot Models,URDF Validation,"Validate custom robot URDF file.","check_urdf path/to/my_robot.urdf",Output: 'URDF file is valid'.
+Digital Twin,URDF and Robot Models,RViz Visualization,"Visualize custom robot URDF in RViz2.","ros2 launch my_robot_pkg display_my_robot.launch.py",RViz2 displays robot model correctly.
+Digital Twin,Advanced Gazebo,ROS 2 Control,"Verify custom robot control in Gazebo via ROS 2.","ros2 launch my_robot_control robot_control.launch.py",Robot moves in Gazebo in response to controller commands.
+Digital Twin,Advanced Gazebo,Sensor Data,"Monitor simulated lidar data in RViz2.","rviz2 & ros2 topic echo /lidar_data",RViz2 displays lidar scans; terminal shows raw lidar data.
+Digital Twin,Unity Robotics Hub,ROS 2 Bridge,"Verify ROS 2 communication with Unity.","ros2 run teleop_twist_keyboard teleop_twist_keyboard & Launch Unity project and run scene",Robot in Unity moves according to keyboard input.
+NVIDIA Isaac,Introduction to Isaac Sim,Installation,"Verify Isaac Sim installation and sample scene load.","Launch Isaac Sim; Load a sample scene from the UI",Sample scene loads and interacts correctly.
+NVIDIA Isaac,Isaac Sim Setup,Python Scripting,"Verify programmatic scene creation in Isaac Sim.","python path/to/create_falling_sphere.py --headless",Isaac Sim launches (or runs headless) and shows sphere falling.
+NVIDIA Isaac,Robot Integration,URDF Import,"Verify URDF import into Isaac Sim.","python path/to/import_urdf_robot.py",URDF robot model appears staged in Isaac Sim.
+NVIDIA Isaac,Robot Integration,ROS 2 Teleop,"Verify ROS 2 teleoperation of Isaac Sim robot.","ros2 run teleop_twist_keyboard teleop_twist_keyboard & python path/to/isaac_ros2_teleop.py",Isaac Sim robot moves according to keyboard input.
+NVIDIA Isaac,Perception and AI,Synthetic Data,"Verify synthetic data collection.","python path/to/synthetic_data_collector.py",Annotated images and metadata saved to output directory.
+NVIDIA Isaac,Perception and AI,Object Detection,"Verify real-time object detection in Isaac Sim.","python path/to/object_detector_inference.py",Isaac Sim viewport shows bounding boxes on detected objects.
+VLA,Speech Recognition,Whisper ASR,"Verify real-time speech transcription.","ros2 run vla_package ros2_whisper_node.py",Terminal displays accurate real-time transcription of spoken words.
+VLA,Natural Language Understanding,NLU Parsing,"Verify structured command parsing.","ros2 run vla_package ros2_nlu_node.py & ros2 topic pub /asr_text std_msgs/msg/String 'data: \"move forward one meter\"'",Terminal or subscribed topic shows parsed JSON: `{'intent': 'move', 'direction': 'forward', 'distance': '1 meter'}`.
+VLA,Robot Action Planning,Task Execution,"Verify planned action sequence execution.","ros2 launch vla_system_launch vla_system.launch.py & ros2 topic pub /nlu_commands my_msgs/msg/Command '{intent: \"clear_table\", target: \"red cup\"}'",Simulated robot executes sequence of pick/place actions.
+VLA,Capstone Project,End-to-End VLA,"Verify full VLA pipeline with complex command.","ros2 launch vla_system_launch vla_system.launch.py & Speak \"Robot, please clear the table. Start with the red cup.\"",Robot understands, plans, and executes task, providing feedback.
+Docusaurus,Build & Deploy,Build Site,"Verify Docusaurus site builds without errors.","cd book && npm run build",Build completes with 'successfully built' message and no errors.
+Docusaurus,Build & Deploy,Broken Links,"Check for broken links in Docusaurus site.","cd book && npm run docusaurus check-links",No broken links reported.
+```

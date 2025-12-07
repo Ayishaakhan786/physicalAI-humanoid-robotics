@@ -1,0 +1,48 @@
+# Chapter Spec: Implementing Services and Actions
+
+**Module**: The Robotic Nervous System (ROS 2)
+**Chapter Title**: Implementing Services and Actions
+**Filename**: 04-services-actions.mdx
+**Word Count Target**: 1500-1800 words
+
+## Learning Objectives (3-5)
+- Understand the synchronous request-response communication pattern using ROS 2 services.
+- Implement ROS 2 service servers and clients in both Python (rclpy) and C++ (rclcpp).
+- Grasp the concept of long-running, goal-based communication using ROS 2 actions.
+- Implement ROS 2 action servers and clients in both Python (rclpy) and C++ (rclcpp).
+- Utilize ROS 2 command-line tools for service and action introspection.
+
+## Required Pre-knowledge
+- Understanding of ROS 2 nodes and topics (from previous chapters).
+- Basic programming skills in Python and/or C++.
+- Familiarity with the Linux command line.
+
+## High-level Lab Tasks
+- Implement a simple "add two integers" ROS 2 service and corresponding client.
+- Implement a "fibonacci sequence" ROS 2 action server and a client to request a sequence.
+- Use `ros2 service list`, `ros2 service type`, `ros2 service call` for service introspection.
+- Use `ros2 action list`, `ros2 action info`, `ros2 action send_goal` for action introspection.
+
+## Code Snippets to Include (list of files and short description)
+- `py_add_two_ints_server.py`: Python service server.
+- `py_add_two_ints_client.py`: Python service client.
+- `cpp_add_two_ints_server.cpp`: C++ service server.
+- `cpp_add_two_ints_client.cpp`: C++ service client.
+- `py_fibonacci_action_server.py`: Python action server.
+- `py_fibonacci_action_client.py`: Python action client.
+
+## Diagrams to Create (text description + suggested filename)
+- Diagram: Service client-server communication flow, highlighting request and response. Suggested filename: `ros2_service_comm.png`.
+- Diagram: Action client-server-goal-feedback communication flow. Suggested filename: `ros2_action_comm.png`.
+
+## Tests/Validation Criteria
+- Successful compilation and execution of all provided service and action code.
+- Service clients receive correct responses from servers.
+- Action clients receive feedback and eventual results from action servers.
+- ROS 2 command-line tools accurately reflect running services and actions.
+
+## Sources (primary docs, links) in APA format
+- ROS 2 Tutorials: Writing a simple service and client (Python/C++) (docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/...).
+- ROS 2 Tutorials: Writing an action server and client (Python/C++) (docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/...).
+- ROS 2 Concepts: Services (docs.ros.org/en/humble/Concepts/Basic/About-Services.html).
+- ROS 2 Concepts: Actions (docs.ros.org/en/humble/Concepts/Basic/About-Actions.html).

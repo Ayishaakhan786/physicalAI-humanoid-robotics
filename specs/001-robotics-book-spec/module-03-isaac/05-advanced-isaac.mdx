@@ -1,0 +1,47 @@
+# Chapter Spec: Advanced Isaac Sim for Complex Scenarios
+
+**Module**: The AI-Robot Brain (NVIDIA Isaac)
+**Chapter Title**: Advanced Isaac Sim for Complex Scenarios
+**Filename**: 05-advanced-isaac.mdx
+**Word Count Target**: 1800-2000 words
+
+## Learning Objectives (3-5)
+- Implement multi-robot simulations within Isaac Sim.
+- Explore advanced physics interactions and material properties for realistic simulation.
+- Integrate external AI frameworks or custom algorithms with Isaac Sim.
+- Utilize Isaac Sim for large-scale synthetic data generation campaigns.
+- Understand the concepts of Domain Randomization for robust AI training.
+
+## Required Pre-knowledge
+- Understanding of perception and AI concepts in Isaac Sim (from previous chapter).
+- Python programming skills.
+- Basic understanding of multi-agent systems and distributed computing (optional).
+
+## High-level Lab Tasks
+- Create a multi-robot scene in Isaac Sim, controlling each robot independently or cooperatively.
+- Design custom physics assets (e.g., deformable objects, liquids) and integrate them into a scene.
+- Connect Isaac Sim to an external machine learning framework (e.g., PyTorch) to send sensor data and receive control commands.
+- Set up a synthetic data generation pipeline using replicators for various lighting, textures, and object poses.
+- Apply domain randomization techniques to a training scene.
+
+## Code Snippets to Include (list of files and short description)
+- `multi_robot_control.py`: Python script for controlling multiple robots in Isaac Sim.
+- `custom_physics_asset.usd`: USD file defining a custom physics asset.
+- `external_ai_integration.py`: Python script for interfacing Isaac Sim with an external AI framework.
+- `synthetic_data_replicator_config.py`: Python script configuring a large-scale synthetic data generation using replicators.
+
+## Diagrams to Create (text description + suggested filename)
+- Diagram: Multi-robot simulation architecture in Isaac Sim, showing communication paths. Suggested filename: `isaac_sim_multi_robot.png`.
+- Diagram: Synthetic data generation pipeline with domain randomization. Suggested filename: `isaac_sim_domain_randomization.png`.
+
+## Tests/Validation Criteria
+- Multiple robots can be simulated and controlled simultaneously in a scene.
+- Custom physics assets behave realistically.
+- External AI framework successfully communicates with Isaac Sim for inference/control.
+- Large-scale synthetic datasets are generated with variations in rendered images.
+
+## Sources (primary docs, links) in APA format
+- NVIDIA Isaac Sim Tutorials: Multi-Robot Simulation (docs.omniverse.nvidia.com/isaacsim/latest/…).
+- NVIDIA Isaac Sim Tutorials: Replicator (docs.omniverse.nvidia.com/isaacsim/latest/…).
+- NVIDIA Isaac Sim Tutorials: Domain Randomization.
+- Advanced USD documentation for physics properties.

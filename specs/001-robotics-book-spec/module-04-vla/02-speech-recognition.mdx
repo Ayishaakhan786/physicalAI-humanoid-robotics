@@ -1,0 +1,47 @@
+# Chapter Spec: Speech Recognition for Robotics (Whisper)
+
+**Module**: Vision-Language-Action (VLA)
+**Chapter Title**: Speech Recognition for Robotics (Whisper)
+**Filename**: 02-speech-recognition.mdx
+**Word Count Target**: 1500-1800 words
+
+## Learning Objectives (3-5)
+- Understand the principles of Automatic Speech Recognition (ASR) and its role in human-robot interaction.
+- Explore the capabilities and limitations of models like OpenAI Whisper for speech-to-text conversion.
+- Implement real-time speech transcription from a microphone input using Whisper.
+- Integrate Whisper's output into a basic ROS 2 system for command processing.
+- Evaluate the performance of ASR models in noisy robotic environments.
+
+## Required Pre-knowledge
+- Basic understanding of VLA concepts (from previous chapter).
+- Python programming skills.
+- Familiarity with ROS 2 (nodes, topics).
+- Basic audio processing concepts (optional).
+
+## High-level Lab Tasks
+- Set up a Python environment with Whisper and necessary audio libraries.
+- Transcribe audio from a WAV file using a pre-trained Whisper model.
+- Implement a real-time speech transcriber that listens to microphone input.
+- Create a ROS 2 node that publishes transcribed text to a ROS 2 topic.
+- Test Whisper's transcription accuracy with various spoken commands and background noise.
+
+## Code Snippets to Include (list of files and short description)
+- `whisper_transcriber.py`: Python script for transcribing audio from file or microphone.
+- `ros2_whisper_node.py`: ROS 2 node that uses Whisper for real-time speech transcription and publishes to a topic.
+- `command_parser_node.py`: ROS 2 node subscribing to transcribed text and printing parsed commands.
+
+## Diagrams to Create (text description + suggested filename)
+- Diagram: ASR pipeline from audio input to transcribed text, highlighting Whisper's role. Suggested filename: `asr_whisper_pipeline.png`.
+- Diagram: ROS 2 integration of Whisper, showing audio input, Whisper node, and text topic. Suggested filename: `ros2_whisper_integration.png`.
+
+## Tests/Validation Criteria
+- Whisper model successfully transcribes sample audio files with high accuracy.
+- Real-time microphone input is accurately transcribed.
+- ROS 2 node publishes transcribed text to a topic.
+- Transcribed commands can be successfully received and processed by a ROS 2 subscriber.
+
+## Sources (primary docs, links) in APA format
+- OpenAI Whisper Model Card and Documentation (openai.com/research/whisper).
+- PyTorch/TensorFlow documentation for model loading.
+- ROS 2 Python client library (rclpy) documentation.
+- Audio processing libraries (e.g., PyAudio, soundfile) documentation.

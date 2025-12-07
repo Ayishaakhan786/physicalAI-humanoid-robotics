@@ -1,0 +1,50 @@
+# Chapter Spec: Basic Robot Control with ROS 2
+
+**Module**: The Robotic Nervous System (ROS 2)
+**Chapter Title**: Basic Robot Control with ROS 2
+**Filename**: 05-robot-control.mdx
+**Word Count Target**: 1800-2000 words
+
+## Learning Objectives (3-5)
+- Integrate ROS 2 communication concepts to control a simulated robot.
+- Understand how to publish velocity commands to control a robot's movement.
+- Process basic sensor data (e.g., odometry) from a simulated robot.
+- Familiarize with robot visualization tools like `rviz2`.
+- Develop simple teleoperation nodes for manual robot control.
+
+## Required Pre-knowledge
+- Understanding of ROS 2 nodes, topics, services, and actions (from previous chapters).
+- Basic programming skills in Python.
+- Familiarity with the Linux command line.
+- Basic concepts of robot kinematics (optional, but helpful).
+
+## High-level Lab Tasks
+- Launch a simple simulated robot (e.g., `turtlesim` or a basic differential drive robot in Gazebo).
+- Implement a Python node to publish `geometry_msgs/Twist` messages to control the robot's linear and angular velocity.
+- Implement a Python node to subscribe to `nav_msgs/Odometry` messages and print the robot's pose.
+- Set up `rviz2` to visualize the simulated robot and its sensor data.
+- Create a teleoperation node that translates keyboard inputs into `Twist` commands.
+
+## Code Snippets to Include (list of files and short description)
+- `velocity_publisher.py`: Python node to send `Twist` commands.
+- `odometry_subscriber.py`: Python node to receive and display odometry.
+- `keyboard_teleop.py`: Python node for keyboard-based teleoperation.
+- `simple_robot.urdf`: URDF file for a basic differential drive robot.
+- `spawn_robot.launch.py`: ROS 2 launch file to spawn the robot in Gazebo (or similar simulator).
+
+## Diagrams to Create (text description + suggested filename)
+- Diagram: Control loop for a mobile robot, showing command input, ROS 2 topics, and robot output. Suggested filename: `robot_control_loop.png`.
+- Diagram: `rviz2` interface for robot visualization, highlighting key displays (robot model, odometry, laser scan). Suggested filename: `rviz2_visualization.png`.
+
+## Tests/Validation Criteria
+- Simulated robot responds correctly to published `Twist` commands.
+- `odometry_subscriber.py` correctly reports the robot's changing position and orientation.
+- `rviz2` displays the robot model and its movement accurately.
+- Keyboard teleoperation successfully controls the simulated robot.
+
+## Sources (primary docs, links) in APA format
+- ROS 2 Tutorials: `turtlesim` and basic Python/C++ code.
+- `geometry_msgs/Twist` message definition.
+- `nav_msgs/Odometry` message definition.
+- `rviz2` documentation (docs.ros.org).
+- URDF (Unified Robot Description Format) official documentation.

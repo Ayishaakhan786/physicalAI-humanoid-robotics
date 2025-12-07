@@ -1,0 +1,46 @@
+# Chapter Spec: URDF and Robot Models
+
+**Module**: The Digital Twin (Gazebo & Unity)
+**Chapter Title**: URDF and Robot Models
+**Filename**: 03-urdf-models.mdx
+**Word Count Target**: 1500-1800 words
+
+## Learning Objectives (3-5)
+- Understand the structure and syntax of URDF (Unified Robot Description Format).
+- Create a URDF model for a simple robotic arm or mobile robot from scratch.
+- Define robot kinematics (links and joints) and visual/collision properties.
+- Load and visualize URDF models in `rviz2`.
+- Integrate URDF models into Gazebo simulations.
+
+## Required Pre-knowledge
+- Basic understanding of Gazebo simulation (from previous chapter).
+- Familiarity with XML syntax.
+- Basic concepts of robot kinematics (links, joints, degrees of freedom).
+
+## High-level Lab Tasks
+- Design a simple 2-DOF robotic arm or a 2-wheeled mobile robot on paper.
+- Write the URDF file for the designed robot, defining its links, joints, and visual/collision properties.
+- Use `check_urdf` tool to validate the URDF syntax.
+- Launch the URDF model in `rviz2` for visualization and verify its kinematics.
+- Spawn the URDF model in Gazebo and verify its physical properties.
+
+## Code Snippets to Include (list of files and short description)
+- `my_robot.urdf`: URDF file for a simple 2-DOF robotic arm or mobile robot.
+- `display_my_robot.launch.py`: ROS 2 launch file to display `my_robot.urdf` in `rviz2`.
+- `spawn_my_robot_in_gazebo.launch.py`: ROS 2 launch file to spawn `my_robot.urdf` in Gazebo.
+
+## Diagrams to Create (text description + suggested filename)
+- Diagram: URDF hierarchical structure (root link, child links, joints). Suggested filename: `urdf_hierarchy.png`.
+- Diagram: Key elements of a URDF link (visual, collision, inertial). Suggested filename: `urdf_link_elements.png`.
+- Diagram: Key elements of a URDF joint (parent, child, axis, limits). Suggested filename: `urdf_joint_elements.png`.
+
+## Tests/Validation Criteria
+- `check_urdf` tool reports no errors for the created URDF file.
+- `rviz2` correctly displays the robot model with correct joint limits and transforms.
+- Robot model spawns in Gazebo without errors and exhibits basic physics (e.g., falls due to gravity).
+
+## Sources (primary docs, links) in APA format
+- URDF (Unified Robot Description Format) official documentation (wiki.ros.org/urdf).
+- ROS 2 Tutorials: URDF (docs.ros.org/en/humble/Tutorials/URDF/Overview.html).
+- `rviz2` documentation (docs.ros.org).
+- Gazebo Model Editor documentation.

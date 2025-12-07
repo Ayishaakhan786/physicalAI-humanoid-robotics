@@ -1,0 +1,47 @@
+# Chapter Spec: Robot Action and Task Planning
+
+**Module**: Vision-Language-Action (VLA)
+**Chapter Title**: Robot Action and Task Planning
+**Filename**: 04-action-planning.mdx
+**Word Count Target**: 1500-1800 words
+
+## Learning Objectives (3-5)
+- Understand the principles of robot action selection and task planning.
+- Translate structured natural language commands into sequences of primitive robot actions.
+- Implement a basic action planning system for a mobile manipulator robot.
+- Explore hierarchical task planning and state machine approaches for robotic tasks.
+- Integrate action planning with ROS 2 execution systems (e.g., Nav2, MoveIt 2).
+
+## Required Pre-knowledge
+- Understanding of NLU for robot commands (from previous chapter).
+- Python programming skills.
+- Familiarity with ROS 2 concepts (actions, services, topics).
+- Basic concepts of robot kinematics and motion control.
+
+## High-level Lab Tasks
+- Define a set of primitive actions for a simulated mobile manipulator robot (e.g., `move_base`, `pick_object`, `place_object`).
+- Implement a Python-based task planner that takes a structured NLU command (e.g., `{'intent': 'move', 'target': 'kitchen'}`) and generates a sequence of primitive actions.
+- Create ROS 2 action clients to execute these primitive actions on a simulated robot (e.g., using `Nav2` for navigation, `MoveIt 2` for manipulation).
+- Develop a state machine in Python to manage the execution flow of a complex task (e.g., "fetch me the cup").
+
+## Code Snippets to Include (list of files and short description)
+- `robot_actions.py`: Python module defining primitive robot actions as ROS 2 action clients.
+- `task_planner_node.py`: ROS 2 node that implements the task planning logic, subscribing to NLU commands and sending action goals.
+- `complex_task_state_machine.py`: Python script demonstrating a state machine for task execution.
+- `example_nlu_commands.json`: JSON file with example structured NLU commands for testing.
+
+## Diagrams to Create (text description + suggested filename)
+- Diagram: Task planning pipeline from NLU output to primitive actions, including feedback loops. Suggested filename: `task_planning_pipeline.png`.
+- Diagram: State machine for a typical robotic task (e.g., pick and place). Suggested filename: `robot_state_machine.png`.
+
+## Tests/Validation Criteria
+- Task planner correctly generates action sequences for given NLU commands.
+- Simulated robot successfully executes the planned action sequences.
+- State machine correctly transitions between states based on action results.
+- End-to-end NLU to action pipeline functions as expected.
+
+## Sources (primary docs, links) in APA format
+- ROS 2 Nav2 Documentation (navigation.ros.org).
+- ROS 2 MoveIt 2 Documentation (moveit.ros.org/moveit2/).
+- Behavior Trees for Robotics (behaviortrees.github.io).
+- AI Planning literature (e.g., PDDL, STRIPS).

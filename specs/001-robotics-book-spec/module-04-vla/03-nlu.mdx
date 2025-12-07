@@ -1,0 +1,45 @@
+# Chapter Spec: Natural Language Understanding for Robot Commands
+
+**Module**: Vision-Language-Action (VLA)
+**Chapter Title**: Natural Language Understanding for Robot Commands
+**Filename**: 03-nlu.mdx
+**Word Count Target**: 1500-1800 words
+
+## Learning Objectives (3-5)
+- Understand the principles of Natural Language Understanding (NLU) in the context of robot command interpretation.
+- Explore techniques for extracting intent and entities from natural language instructions.
+- Utilize Large Language Models (LLMs) or task-specific NLU models for command parsing.
+- Design a vocabulary and grammar for a robot's domain-specific commands.
+- Integrate NLU output with a robot's action planning system.
+
+## Required Pre-knowledge
+- Basic understanding of speech recognition and VLA concepts (from previous chapters).
+- Python programming skills.
+- Familiarity with ROS 2.
+- Basic NLP concepts (tokens, embeddings, intent recognition).
+
+## High-level Lab Tasks
+- Define a set of simple commands for a robot (e.g., "move forward 1 meter", "turn left 90 degrees").
+- Implement a rule-based or simple LLM-based NLU system to parse these commands into structured data (e.g., `{'intent': 'move', 'direction': 'forward', 'distance': '1 meter'}`).
+- Create a ROS 2 node that subscribes to a topic with raw text (from ASR) and publishes structured commands.
+- Experiment with different NLU models (e.g., fine-tuned BERT, a small LLM API) for command parsing.
+
+## Code Snippets to Include (list of files and short description)
+- `robot_nlu_parser.py`: Python script for parsing natural language commands into structured intent and entities.
+- `ros2_nlu_node.py`: ROS 2 node that performs NLU on transcribed text and publishes structured commands.
+- `command_vocabulary.yaml`: YAML file defining the robot's command vocabulary and associated parameters.
+
+## Diagrams to Create (text description + suggested filename)
+- Diagram: NLU pipeline from raw text to structured command, highlighting intent and entity extraction. Suggested filename: `nlu_pipeline.png`.
+- Diagram: Integration of ASR and NLU in a ROS 2 system, showing data flow between Whisper, NLU node, and command topic. Suggested filename: `ros2_asr_nlu_integration.png`.
+
+## Tests/Validation Criteria
+- NLU parser correctly extracts intent and entities from a diverse set of natural language commands.
+- ROS 2 NLU node publishes structured commands accurately.
+- Robot's command vocabulary is clearly defined and covers expected interactions.
+
+## Sources (primary docs, links) in APA format
+- Hugging Face Transformers documentation (huggingface.co/docs/transformers/index).
+- SpaCy documentation (spacy.io).
+- OpenAI API documentation for LLMs.
+- ROS 2 Tutorials for custom message definitions.

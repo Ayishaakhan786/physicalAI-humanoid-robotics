@@ -1,0 +1,46 @@
+# Chapter Spec: Gazebo Simulation Basics
+
+**Module**: The Digital Twin (Gazebo & Unity)
+**Chapter Title**: Gazebo Simulation Basics
+**Filename**: 02-gazebo-sim.mdx
+**Word Count Target**: 1500-1800 words
+
+## Learning Objectives (3-5)
+- Install and configure Gazebo Classic or Gazebo Garden (based on ROS 2 Humble compatibility).
+- Understand the Gazebo user interface and basic controls.
+- Launch and interact with pre-existing robot models (e.g., TurtleBot3) in Gazebo.
+- Create simple Gazebo environments with primitive shapes and terrains.
+- Perform basic sensor data visualization within Gazebo.
+
+## Required Pre-knowledge
+- Basic understanding of Digital Twins and simulation concepts (from previous chapter).
+- Familiarity with the Linux command line.
+- Basic ROS 2 concepts (nodes, topics) for potential future integration.
+
+## High-level Lab Tasks
+- Install Gazebo Classic (recommended for ROS 2 Humble) and its ROS 2 bridge.
+- Launch a pre-configured Gazebo world with a simple robot.
+- Use Gazebo GUI to move the robot, inspect sensor data, and manipulate objects.
+- Create a custom `.world` file in Gazebo with a ground plane and a few static objects (e.g., box, cylinder).
+- Save and load Gazebo world states.
+
+## Code Snippets to Include (list of files and short description)
+- `install_gazebo_classic_ros2_humble.sh`: Shell script for Gazebo Classic installation and ROS 2 bridge setup.
+- `simple_world.world`: XML definition of a basic Gazebo world.
+- `launch_turtlebot3_world.launch.py`: ROS 2 launch file to bring up TurtleBot3 in a Gazebo world.
+
+## Diagrams to Create (text description + suggested filename)
+- Diagram: Gazebo user interface components (viewport, object tree, plugins panel). Suggested filename: `gazebo_ui.png`.
+- Diagram: Flow of a Gazebo simulation, highlighting physics engine, sensor simulation, and rendering. Suggested filename: `gazebo_simulation_flow.png`.
+
+## Tests/Validation Criteria
+- Successful launch of Gazebo with a robot model.
+- Robot can be teleoperated or manipulated within the simulation.
+- Custom Gazebo world loads correctly with defined objects.
+- Sensor data (e.g., lidar, camera) is visible and plausible in Gazebo.
+
+## Sources (primary docs, links) in APA format
+- Gazebo Classic Documentation (classic.gazebosim.org/tutorials).
+- ROS 2 Gazebo Tutorials (docs.ros.org/en/humble/Tutorials/Simulators/Gazebo/Overview.html).
+- TurtleBot3 ROS 2 Tutorials (robotis.github.io/turtlebot3_docs/).
+- SDF (Simulation Description Format) specification (sdformat.org).

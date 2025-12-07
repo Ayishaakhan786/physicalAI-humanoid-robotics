@@ -1,0 +1,49 @@
+# Chapter Spec: Advanced Gazebo Features and ROS 2 Integration
+
+**Module**: The Digital Twin (Gazebo & Unity)
+**Chapter Title**: Advanced Gazebo Features and ROS 2 Integration
+**Filename**: 04-advanced-gazebo.mdx
+**Word Count Target**: 1500-1800 words
+
+## Learning Objectives (3-5)
+- Integrate custom URDF robot models with Gazebo and ROS 2.
+- Implement ROS 2 control interfaces for Gazebo simulated robots.
+- Simulate advanced sensors (e.g., Lidar, Camera, IMU) within Gazebo.
+- Create and use custom Gazebo plugins for specialized robot behaviors or environment interactions.
+- Debug Gazebo simulations and ROS 2 integration issues.
+
+## Required Pre-knowledge
+- Understanding of URDF and robot modeling (from previous chapter).
+- Familiarity with Gazebo simulation basics.
+- ROS 2 programming concepts (nodes, topics, services, actions).
+- Basic C++ programming skills for custom plugins.
+
+## High-level Lab Tasks
+- Spawn a custom URDF robot (created in previous chapter) in Gazebo with ROS 2 control.
+- Implement a ROS 2 controller node to command the robot's joints or wheels.
+- Add a simulated lidar sensor and a camera to the URDF model and visualize their data in `rviz2`.
+- Write a simple Gazebo plugin to apply an external force or interact with an object.
+- Use `ros2 topic echo` and `rqt_plot` to monitor simulated sensor data.
+
+## Code Snippets to Include (list of files and short description)
+- `my_robot_controller.cpp`: C++ ROS 2 node for controlling the robot in Gazebo.
+- `my_robot_sensor.urdf.xacro`: XACRO file extending URDF with Lidar and Camera definitions.
+- `my_gazebo_plugin.cpp`: C++ code for a simple custom Gazebo plugin.
+- `advanced_world.world`: XML definition of a Gazebo world with custom objects and sensor feedback.
+- `robot_control.launch.py`: ROS 2 launch file to bring up Gazebo, the robot, and the controller.
+
+## Diagrams to Create (text description + suggested filename)
+- Diagram: ROS 2 control loop for a simulated robot in Gazebo, showing topics for commands and sensor feedback. Suggested filename: `gazebo_ros2_control.png`.
+- Diagram: Data flow from simulated Gazebo sensors to ROS 2 topics and `rviz2`. Suggested filename: `gazebo_sensor_data_flow.png`.
+
+## Tests/Validation Criteria
+- Custom robot spawns correctly in Gazebo with all simulated sensors.
+- Robot responds accurately to ROS 2 control commands (e.g., moves forward, rotates).
+- Simulated sensor data (e.g., Lidar scan, camera image) is visible and consistent in `rviz2`.
+- Custom Gazebo plugin exhibits expected behavior.
+
+## Sources (primary docs, links) in APA format
+- Gazebo Plugins documentation (classic.gazebosim.org/tutorials?cat=plugins).
+- ROS 2 Control (control.ros.org).
+- ROS 2 Gazebo Tutorials: Advanced (docs.ros.org/en/humble/Tutorials/Simulators/Gazebo/…).
+- SDF (Simulation Description Format) for advanced features.

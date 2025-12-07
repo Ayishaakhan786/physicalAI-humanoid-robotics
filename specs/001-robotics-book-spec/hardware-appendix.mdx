@@ -1,0 +1,46 @@
+# Chapter Spec: Hardware Appendix: Jetson Orin Setup
+
+**Module**: Appendices and Miscellaneous
+**Chapter Title**: Hardware Appendix: Jetson Orin Setup
+**Filename**: hardware-appendix.mdx
+**Word Count Target**: 1500-2000 words
+
+## Learning Objectives (3-5)
+- Understand the capabilities and variants of the NVIDIA Jetson Orin platform.
+- Learn how to set up and configure a Jetson Orin device for robotics development.
+- Install necessary software and drivers for ROS 2 and other key libraries on Jetson Orin.
+- Troubleshoot common setup issues with Jetson Orin devices.
+- Explore best practices for optimizing performance on Jetson Orin.
+
+## Required Pre-knowledge
+- Basic Linux command-line interface skills.
+- Familiarity with hardware setup concepts (e.g., flashing OS images).
+- Understanding of ROS 2 installation (from Module 1).
+
+## High-level Lab Tasks
+- Flash the JetPack SDK onto a Jetson Orin developer kit.
+- Install ROS 2 Humble on the Jetson Orin.
+- Configure network settings for communication between Jetson and host PC.
+- Run a basic ROS 2 example (e.g., `turtlesim`) directly on the Jetson Orin.
+- Optimize Jetson Orin power modes and performance settings.
+
+## Code Snippets to Include (list of files and short description)
+- `flash_jetson_orin.sh`: Shell script for flashing JetPack (high-level steps).
+- `install_ros2_jetson.sh`: Shell script for ROS 2 Humble installation on Jetson.
+- `jetson_power_modes.sh`: Shell script to switch Jetson power modes.
+
+## Diagrams to Create (text description + suggested filename)
+- Diagram: Jetson Orin developer kit board layout, highlighting key ports. Suggested filename: `jetson_orin_layout.png`.
+- Diagram: Software stack on Jetson Orin (JetPack, CUDA, cuDNN, ROS 2). Suggested filename: `jetson_software_stack.png`.
+
+## Tests/Validation Criteria
+- Jetson Orin successfully boots with JetPack.
+- ROS 2 Humble runs correctly on the Jetson Orin.
+- Basic ROS 2 examples (e.g., `turtlesim`) execute without errors on the device.
+- Power mode switching functions as expected.
+
+## Sources (primary docs, links) in APA format
+- NVIDIA Jetson Documentation (developer.nvidia.com/embedded/jetson-developer-kits).
+- JetPack SDK Documentation.
+- ROS 2 Installation Guide for Arm (docs.ros.org).
+- NVIDIA Developer Forum resources for Jetson Orin.

@@ -1,0 +1,175 @@
+{
+  "modules": [
+    {
+      "id": "module-01-ros2",
+      "title": "Module 1: The Robotic Nervous System (ROS 2)",
+      "chapters": [
+        {
+          "title": "Introduction to ROS 2",
+          "summary": "This chapter introduces the fundamental concepts of ROS 2, its architecture, and its role in modern robotics development.",
+          "filename": "01-intro.mdx",
+          "word_count_target": "1200-1500"
+        },
+        {
+          "title": "ROS 2 Architecture and Core Concepts",
+          "summary": "Dive deeper into ROS 2's graph-based communication, exploring nodes, topics, messages, services, and actions with practical examples.",
+          "filename": "02-ros-architecture.mdx",
+          "word_count_target": "1500-1800"
+        },
+        {
+          "title": "Working with Nodes and Topics",
+          "summary": "Learn to create, manage, and debug ROS 2 nodes, and master asynchronous communication using topics and message types.",
+          "filename": "03-nodes-topics.mdx",
+          "word_count_target": "1500-1800"
+        },
+        {
+          "title": "Implementing Services and Actions",
+          "summary": "Understand synchronous and long-running communication patterns in ROS 2 through the implementation of services and action servers/clients.",
+          "filename": "04-services-actions.mdx",
+          "word_count_target": "1500-1800"
+        },
+        {
+          "title": "Basic Robot Control with ROS 2",
+          "summary": "Apply ROS 2 concepts to control a simulated robot, covering basic movement commands, sensor data processing, and simple navigation.",
+          "filename": "05-robot-control.mdx",
+          "word_count_target": "1800-2000"
+        }
+      ]
+    },
+    {
+      "id": "module-02-digital-twin",
+      "title": "Module 2: The Digital Twin (Gazebo & Unity)",
+      "chapters": [
+        {
+          "title": "Introduction to Digital Twins in Robotics",
+          "summary": "Explore the concept of digital twins, their importance in robotics development, and an overview of common simulation tools.",
+          "filename": "01-intro.mdx",
+          "word_count_target": "1200-1500"
+        },
+        {
+          "title": "Gazebo Simulation Basics",
+          "summary": "Set up and interact with Gazebo, creating simple environments and launching basic robot models for simulation.",
+          "filename": "02-gazebo-sim.mdx",
+          "word_count_target": "1500-1800"
+        },
+        {
+          "title": "URDF and Robot Models",
+          "summary": "Learn to define robot kinematics and appearance using URDF (Unified Robot Description Format) for use in simulation and visualization.",
+          "filename": "03-urdf-models.mdx",
+          "word_count_target": "1500-1800"
+        },
+        {
+          "title": "Advanced Gazebo Features and ROS 2 Integration",
+          "summary": "Explore advanced Gazebo plugins, sensor simulation, and seamless integration with ROS 2 for complex robotic tasks.",
+          "filename": "04-advanced-gazebo.mdx",
+          "word_count_target": "1500-1800"
+        },
+        {
+          "title": "Introduction to Unity Robotics Hub",
+          "summary": "Discover how Unity can be used for high-fidelity robot visualization and simulation, leveraging its powerful rendering capabilities.",
+          "filename": "05-unity-robotics.mdx",
+          "word_count_target": "1800-2000"
+        }
+      ]
+    },
+    {
+      "id": "module-03-isaac",
+      "title": "Module 3: The AI-Robot Brain (NVIDIA Isaac)",
+      "chapters": [
+        {
+          "title": "Introduction to NVIDIA Isaac Sim",
+          "summary": "Get started with NVIDIA Isaac Sim, understanding its architecture, features, and role in AI-driven robotics development.",
+          "filename": "01-intro.mdx",
+          "word_count_target": "1200-1500"
+        },
+        {
+          "title": "Isaac Sim Environment Setup and Basics",
+          "summary": "Configure your development environment for Isaac Sim, learn scene creation, object manipulation, and basic simulation controls.",
+          "filename": "02-isaac-sim-basics.mdx",
+          "word_count_target": "1500-1800"
+        },
+        {
+          "title": "Robot Integration and Control in Isaac Sim",
+          "summary": "Integrate robot models into Isaac Sim, control their movements, and simulate sensors for perception tasks.",
+          "filename": "03-robotics-isaac.mdx",
+          "word_count_target": "1500-1800"
+        },
+        {
+          "title": "Perception and AI with Isaac Sim",
+          "summary": "Utilize Isaac Sim's advanced sensor simulation and AI capabilities for object detection, segmentation, and synthetic data generation.",
+          "filename": "04-perception-ai.mdx",
+          "word_count_target": "1500-1800"
+        },
+        {
+          "title": "Advanced Isaac Sim for Complex Scenarios",
+          "summary": "Explore advanced features like multi-robot simulation, physics-based interactions, and integration with external AI frameworks.",
+          "filename": "05-advanced-isaac.mdx",
+          "word_count_target": "1800-2000"
+        }
+      ]
+    },
+    {
+      "id": "module-04-vla",
+      "title": "Module 4: Vision-Language-Action (VLA)",
+      "chapters": [
+        {
+          "title": "Introduction to Vision-Language-Action (VLA)",
+          "summary": "Understand the convergence of computer vision, natural language processing, and robotic control for intelligent robot behaviors.",
+          "filename": "01-intro.mdx",
+          "word_count_target": "1200-1500"
+        },
+        {
+          "title": "Speech Recognition for Robotics (Whisper)",
+          "summary": "Implement speech-to-text capabilities using models like OpenAI Whisper, enabling robots to understand verbal commands.",
+          "filename": "02-speech-recognition.mdx",
+          "word_count_target": "1500-1800"
+        },
+        {
+          "title": "Natural Language Understanding for Robot Commands",
+          "summary": "Leverage Large Language Models (LLMs) to interpret complex natural language instructions and extract actionable commands for robots.",
+          "filename": "03-nlu.mdx",
+          "word_count_target": "1500-1800"
+        },
+        {
+          "title": "Robot Action and Task Planning",
+          "summary": "Translate high-level natural language commands into a sequence of executable robot actions, incorporating planning and execution feedback.",
+          "filename": "04-action-planning.mdx",
+          "word_count_target": "1500-1800"
+        },
+        {
+          "title": "VLA Capstone Project: Bringing It All Together",
+          "summary": "Integrate Vision, Language, and Action components into a comprehensive capstone project, demonstrating intelligent human-robot interaction.",
+          "filename": "05-vla-capstone.mdx",
+          "word_count_target": "1800-2000"
+        }
+      ]
+    }
+  ],
+  "appendices_and_misc": [
+    {
+      "title": "Preface",
+      "filename": "preface.mdx",
+      "word_count_target": "800-1200"
+    },
+    {
+      "title": "Hardware Appendix: Jetson Orin Setup",
+      "filename": "hardware-appendix.mdx",
+      "word_count_target": "1500-2000"
+    },
+    {
+      "title": "Capstone Appendix: Project Guidelines",
+      "filename": "capstone-appendix.mdx",
+      "word_count_target": "1500-2000"
+    },
+    {
+      "title": "References",
+      "filename": "references.mdx",
+      "word_count_target": "800-1200"
+    },
+    {
+      "title": "Glossary",
+      "filename": "glossary.mdx",
+      "word_count_target": "800-1200"
+    }
+  ]
+}

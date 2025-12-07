@@ -1,0 +1,46 @@
+# Chapter Spec: ROS 2 Architecture and Core Concepts
+
+**Module**: The Robotic Nervous System (ROS 2)
+**Chapter Title**: ROS 2 Architecture and Core Concepts
+**Filename**: 02-ros-architecture.mdx
+**Word Count Target**: 1500-1800 words
+
+## Learning Objectives (3-5)
+- Explain the layered architecture of ROS 2, including the RMW (ROS Middleware) and DDS.
+- Describe the function of key ROS 2 computational graph elements: nodes, topics, services, and actions.
+- Understand the role of ROS 2 client libraries (rclpy, rclcpp) and build systems (colcon, ament).
+- Differentiate between various ROS 2 communication patterns and their use cases.
+- Familiarize with basic ROS 2 command-line tools for introspection.
+
+## Required Pre-knowledge
+- Basic understanding of ROS 2 installation and environment setup (from previous chapter).
+- Familiarity with command-line operations in Linux.
+- Foundational programming concepts.
+
+## High-level Lab Tasks
+- Launching multiple nodes and visualizing their connections using `rqt_graph`.
+- Publishing and subscribing to simple topics using `ros2 topic pub` and `ros2 topic echo`.
+- Calling and providing simple services using `ros2 service call` and `ros2 service type`.
+- Monitoring ROS 2 system status with `ros2 node info`, `ros2 topic info`, etc.
+
+## Code Snippets to Include (list of files and short description)
+- `simple_publisher.py`: Python script for a basic ROS 2 publisher node.
+- `simple_subscriber.py`: Python script for a basic ROS 2 subscriber node.
+- `add_two_ints_server.cpp`: C++ code for a service server adding two integers.
+- `add_two_ints_client.py`: Python code for a service client to call the add_two_ints_server.
+
+## Diagrams to Create (text description + suggested filename)
+- Diagram: Layered architecture of ROS 2, showing application layer, client libraries, RMW, and DDS. Suggested filename: `ros2_layered_arch.png`.
+- Diagram: ROS 2 computational graph illustrating nodes, topics, services, and actions. Suggested filename: `ros2_computational_graph.png`.
+- Diagram: Communication flow for topics (publisher-subscriber) and services (client-server). Suggested filename: `ros2_comm_patterns.png`.
+
+## Tests/Validation Criteria
+- Successful execution of all provided code snippets.
+- `rqt_graph` correctly displays the connections between nodes.
+- `ros2 topic echo` displays messages published by `simple_publisher.py`.
+- `ros2 service call` successfully returns a response from `add_two_ints_server.cpp`.
+
+## Sources (primary docs, links) in APA format
+- ROS 2 Concepts documentation (docs.ros.org/en/humble/Concepts.html).
+- ROS 2 Tutorials (docs.ros.org/en/humble/Tutorials.html).
+- DDS (Data Distribution Service) standard documentation.

@@ -1,0 +1,48 @@
+# Chapter Spec: Robot Integration and Control in Isaac Sim
+
+**Module**: The AI-Robot Brain (NVIDIA Isaac)
+**Chapter Title**: Robot Integration and Control in Isaac Sim
+**Filename**: 03-robotics-isaac.mdx
+**Word Count Target**: 1500-1800 words
+
+## Learning Objectives (3-5)
+- Import and configure existing robot models (e.g., from URDF) into Isaac Sim.
+- Understand how to control robot joints and actuators using the Isaac Sim Python API.
+- Implement ROS 2 control for robots simulated within Isaac Sim.
+- Simulate basic sensors attached to robots (e.g., camera, lidar).
+- Develop simple teleoperation interfaces for Isaac Sim robots.
+
+## Required Pre-knowledge
+- Basic understanding of Isaac Sim environment setup and Python scripting (from previous chapter).
+- Familiarity with URDF/USD robot models.
+- ROS 2 programming concepts (nodes, topics, services).
+- Python programming skills.
+
+## High-level Lab Tasks
+- Import a sample URDF robot (e.g., Franka Emika Panda) into an Isaac Sim scene.
+- Write a Python script to control the robot's joints using a simple trajectory.
+- Set up ROS 2 bridge for Isaac Sim and integrate a ROS 2 teleoperation node to control the robot.
+- Add a simulated camera to the robot and view its output.
+- Record robot movements and sensor data from within Isaac Sim.
+
+## Code Snippets to Include (list of files and short description)
+- `import_urdf_robot.py`: Python script to import and stage a URDF robot.
+- `joint_control.py`: Python script demonstrating direct joint control of a robot.
+- `isaac_ros2_teleop.py`: Python ROS 2 node for teleoperating an Isaac Sim robot.
+- `isaac_sim_camera_feed.py`: Python script to visualize simulated camera output.
+
+## Diagrams to Create (text description + suggested filename)
+- Diagram: Data flow for ROS 2 control of an Isaac Sim robot, highlighting the ROS 2 Bridge. Suggested filename: `isaac_sim_ros2_control.png`.
+- Diagram: Isaac Sim sensor integration pipeline (sensor component, physics simulation, data output). Suggested filename: `isaac_sim_sensor_pipeline.png`.
+
+## Tests/Validation Criteria
+- Robot model successfully imports and stages in Isaac Sim.
+- Robot joints move according to programmed trajectories.
+- ROS 2 teleoperation commands correctly control the simulated robot.
+- Simulated camera feeds are visible and update realistically.
+
+## Sources (primary docs, links) in APA format
+- NVIDIA Isaac Sim Tutorials: Importing URDF (docs.omniverse.nvidia.com/isaacsim/latest/…).
+- NVIDIA Isaac Sim ROS 2 Bridge Documentation (docs.omniverse.nvidia.com/isaacsim/latest/ros2_tutorials/ros2_bridge.html).
+- NVIDIA Isaac Sim Python API for Robotics (docs.omniverse.nvidia.com/isaacsim/latest/python_api/robots.html).
+- Franka Emika Panda robot URDF (GitHub reference).

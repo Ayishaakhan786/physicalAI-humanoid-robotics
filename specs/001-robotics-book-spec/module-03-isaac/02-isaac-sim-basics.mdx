@@ -1,0 +1,46 @@
+# Chapter Spec: Isaac Sim Environment Setup and Basics
+
+**Module**: The AI-Robot Brain (NVIDIA Isaac)
+**Chapter Title**: Isaac Sim Environment Setup and Basics
+**Filename**: 02-isaac-sim-basics.mdx
+**Word Count Target**: 1500-1800 words
+
+## Learning Objectives (3-5)
+- Configure Isaac Sim for custom development, including Python environment setup.
+- Understand the Python API for Isaac Sim (OmniGraph, Omniverse Kit).
+- Create basic scenes programmatically using the Python API.
+- Manipulate objects (position, rotation, scale) within Isaac Sim via scripting.
+- Implement basic physics interactions and material properties.
+
+## Required Pre-knowledge
+- Basic understanding of Isaac Sim interface and concepts (from previous chapter).
+- Python programming skills.
+- Familiarity with 3D concepts (transformations, coordinates).
+
+## High-level Lab Tasks
+- Set up a dedicated Python environment for Isaac Sim scripting.
+- Write a Python script to create a simple scene with a ground plane and a falling sphere.
+- Use the Python API to change object properties (e.g., color, friction).
+- Load an external USD file into an Isaac Sim scene via scripting.
+- Run a simple simulation, record, and playback.
+
+## Code Snippets to Include (list of files and short description)
+- `create_falling_sphere.py`: Python script to create a ground plane and sphere with physics.
+- `object_manipulation.py`: Python script demonstrating programmatic control of objects.
+- `load_external_usd.py`: Python script to load a custom USD model.
+
+## Diagrams to Create (text description + suggested filename)
+- Diagram: Isaac Sim Python API structure (omni.isaac.core, omni.usd, omni.physx). Suggested filename: `isaac_sim_python_api.png`.
+- Diagram: Scene graph hierarchy in USD, illustrating how objects are parented. Suggested filename: `usd_scene_graph.png`.
+
+## Tests/Validation Criteria
+- Python scripts execute without errors in the Isaac Sim environment.
+- Programmatically created scenes load correctly with expected objects and physics.
+- Objects can be manipulated as intended by scripts.
+- External USD models load and render correctly.
+
+## Sources (primary docs, links) in APA format
+- NVIDIA Isaac Sim Python Scripting Documentation (docs.omniverse.nvidia.com/isaacsim/latest/…).
+- USD (Universal Scene Description) Python API Documentation.
+- OmniGraph Tutorials (docs.omniverse.nvidia.com/app_dev/latest/…).
+- NVIDIA Isaac Sim Physics Documentation.

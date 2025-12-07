@@ -1,0 +1,40 @@
+# Chapter Spec: Introduction to ROS 2
+
+**Module**: The Robotic Nervous System (ROS 2)
+**Chapter Title**: Introduction to ROS 2
+**Filename**: 01-intro.mdx
+**Word Count Target**: 1200-1500 words
+
+## Learning Objectives (3-5)
+- Understand the concept of a Robot Operating System (ROS) and its evolution to ROS 2.
+- Identify the key advantages of using ROS 2 for robotics development.
+- Recognize the role of middleware (DDS) in ROS 2 communication.
+- Familiarize with the ROS 2 development environment setup (Ubuntu 22.04, ROS 2 Humble).
+- Gain an overview of the book's structure and the modules covered.
+
+## Required Pre-knowledge
+- Basic understanding of Linux command-line interface.
+- Fundamental programming concepts (variables, loops, functions) in Python or C++.
+- General interest in robotics and automation.
+
+## High-level Lab Tasks
+- Setting up the development environment: Install Ubuntu 22.04 and ROS 2 Humble.
+- Verify ROS 2 installation by running basic demo commands (e.g., `ros2 run demo_nodes_cpp talker`).
+- Explore the ROS 2 documentation and community resources.
+
+## Code Snippets to Include (list of files and short description)
+- `install_ros2_humble.sh`: Shell script for automated ROS 2 Humble installation steps.
+- `verify_ros2_install.py`: Python script to check for successful ROS 2 setup.
+
+## Diagrams to Create (text description + suggested filename)
+- Diagram: Evolution of ROS to ROS 2, highlighting key architectural changes and benefits (e.g., DDS). Suggested filename: `ros2_evolution.png`.
+- Diagram: High-level overview of the ROS 2 ecosystem (tools, client libraries, middleware). Suggested filename: `ros2_ecosystem_overview.png`.
+
+## Tests/Validation Criteria
+- Successful execution of `ros2 run demo_nodes_cpp talker` and `ros2 run demo_nodes_py listener` in separate terminals.
+- Environment variables (`ROS_DISTRO`, `AMENT_PREFIX_PATH`) are correctly set after sourcing ROS 2 setup files.
+
+## Sources (primary docs, links) in APA format
+- ROS 2 Documentation: Foxy, Galactic, Humble, Iron references (docs.ros.org).
+- Open Robotics Official Website (www.openrobotics.org).
+- DDS (Data Distribution Service) specification overview (e.g., from OMG).

@@ -1,0 +1,48 @@
+# Chapter Spec: Introduction to Unity Robotics Hub
+
+**Module**: The Digital Twin (Gazebo & Unity)
+**Chapter Title**: Introduction to Unity Robotics Hub
+**Filename**: 05-unity-robotics.mdx
+**Word Count Target**: 1800-2000 words
+
+## Learning Objectives (3-5)
+- Understand the benefits of using Unity for high-fidelity robotics visualization and simulation.
+- Install and configure Unity Hub and the Unity Robotics Hub packages.
+- Integrate ROS 2 with Unity using the ROS-TCP-Connector.
+- Import and control simple robot models within a Unity environment.
+- Create custom Unity scenes for robotics simulation.
+
+## Required Pre-knowledge
+- Basic understanding of Digital Twins and simulation concepts.
+- Familiarity with ROS 2 concepts (nodes, topics, services).
+- Basic C# or Python programming concepts.
+- Familiarity with Unity Editor (optional, but helpful).
+
+## High-level Lab Tasks
+- Install Unity Hub and Unity Editor.
+- Create a new Unity project and install Unity Robotics Hub packages (ROS-TCP-Connector, URDF Importer).
+- Import a simple URDF robot model (e.g., from previous chapter or a sample) into Unity.
+- Set up ROS 2 communication between a Unity scene and an external ROS 2 node.
+- Control the imported robot model from a ROS 2 teleoperation node.
+
+## Code Snippets to Include (list of files and short description)
+- `unity_ros_tcp_setup.md`: Markdown file detailing Unity Hub, Editor, and ROS-TCP-Connector setup steps.
+- `UnityRobotController.cs`: C# script for controlling a robot in Unity via ROS 2 topics.
+- `ros2_teleop_unity.py`: Python ROS 2 node for sending commands to Unity robot.
+- `unity_urdf_import_process.md`: Markdown file outlining the URDF import process into Unity.
+
+## Diagrams to Create (text description + suggested filename)
+- Diagram: Communication bridge between Unity and ROS 2 using ROS-TCP-Connector. Suggested filename: `unity_ros2_bridge.png`.
+- Diagram: Unity Editor layout for robotics simulation, highlighting key windows (Scene, Hierarchy, Inspector, Project). Suggested filename: `unity_editor_layout.png`.
+
+## Tests/Validation Criteria
+- Unity Editor launches successfully with Robotics Hub packages installed.
+- URDF robot model successfully imports into Unity.
+- ROS 2 topics successfully communicate between Unity and external ROS 2 nodes.
+- Robot model in Unity responds correctly to ROS 2 control commands.
+
+## Sources (primary docs, links) in APA format
+- Unity Robotics Hub Documentation (docs.unity3d.com/Packages/com.unity.robotics.ros-tcp-connector@latest).
+- ROS-TCP-Connector GitHub Repository (github.com/Unity-Technologies/ROS-TCP-Connector).
+- Unity Manual: Editor Basics (docs.unity3d.com/Manual/UnityOverview.html).
+- URDF Importer for Unity (github.com/Unity-Technologies/URDF-Importer).
