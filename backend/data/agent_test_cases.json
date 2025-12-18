@@ -1,0 +1,24 @@
+[
+    {
+        "question": "What are the main components of ROS2?",
+        "expected_answer_fragment": "nodes, topics, services, and actions",
+        "expected_sources_fragment": ["module-01-ros2"],
+        "is_out_of_scope": false
+    },
+    {
+        "question": "How can I get started with Docusaurus?",
+        "expected_answer_fragment": "Node.js",
+        "expected_sources_fragment": ["tutorial-basics"],
+        "is_out_of_scope": false
+    },
+    {
+        "question": "What is the capital of France?",
+        "expected_answer_fragment": "cannot answer",
+        "is_out_of_scope": true
+    },
+    {
+        "question": "Tell me about large language models",
+        "expected_answer_fragment": "insufficient details",
+        "is_out_of_scope": true
+    }
+]

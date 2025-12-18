@@ -1,0 +1,23 @@
+[project]
+name = "rag_content_ingestion"
+version = "0.1.0"
+description = "RAG Content Ingestion and Vector Storage Pipeline"
+dependencies = [
+    "requests",
+    "beautifulsoup4",
+    "cohere",
+    "qdrant-client",
+    "python-dotenv",
+    "langchain-text-splitters",
+    "lxml",
+    "fastapi",
+    "uvicorn",
+    "openai",
+]
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Gemini Agent", email = "gemini@example.com" }
+]
+
+
